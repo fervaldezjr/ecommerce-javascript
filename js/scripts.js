@@ -1,22 +1,25 @@
-let celcius = Number(prompt("Introduce los grados celcius"));
+const planets = [];
 
-const convertion = (celcius) => {
-  return (let = farenheit = celcius * 1.8 + 32);
-};
+let newPlanet = prompt("Introduce el nombre de un planeta");
+let breakWhile = false;
 
-alert("Los grados en Farenheit son " + convertion(celcius));
-
-//
-
-let numero = Number(
-  prompt("Introduce un número para averiguar su tabla de múltiplicación")
-);
-
-for (i = 1; i <= 10; i++) {
-  if (numero === numero && numero !== 0) {
-    alert(numero + " x " + i + " = " + numero * i);
-  } else {
-    alert("Error! Has introducido otro tipo de dato");
-    break;
+while (breakWhile == false) {
+  if (newPlanet != "") {
+    planets.push(newPlanet);
   }
+
+  console.log(newPlanet);
+  console.log(planets);
+
+  if (planets.length < 0) {
+    alert("Actualmente hay 0 planetas en tu array");
+    breakWhile == true;
+    break;
+  } else {
+    alert(
+      "En este momento tienes " + planets.length + " planeta(s) en tu array"
+    );
+  }
+  breakWhile == true;
+  break;
 }
