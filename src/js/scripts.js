@@ -1,28 +1,53 @@
+const productos = [
+  {
+    url: 'width="250" height="250" src="https://www.youtube.com/embed/BSTyuQV2nBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
+    serviceName: "Curso de automaquillaje",
+    precio: 80,
+    descripcion:
+      "En este curso descubriras como lograr un maquillaje excelente para tu día a día."
+  },
+  {
+    url: 'width="250" height="250" src="https://www.youtube.com/embed/v2DJvu3gpfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
+    serviceName: "Curso de pieles",
+    precio: 150,
+    descripcion:
+      "Aprendré a cuidar, preparar y tratar tu piel con todo el amor que se merece."
+  },
+  {
+    url: 'width="250" height="250" src="https://www.youtube.com/embed/JrR0KDukTHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
+    serviceName: "Curso de tecnicas de noche",
+    precio: 250,
+    descripcion:
+      "Consigué un resulado impactante y reflejá todo eso que queres lograr en eventos nocturnos."
+  }
+];
+
+
+/* Funciones helpers */
+
+let encontrado;
+
 const comprar = () => {
-  let ingreso = "";
-  let hiceBreak = false;
+  let agregarProducto = ''
+   agregarProducto = prompt('Selecciona que curso deseas comprar \n Curso de automaquillaje \n Curso de pieles \n Cursos de tecnicas de noche') 
 
-  // este metodo pasa a string cualquier objeto
-  alert("Compra algo de eso " + JSON.stringify(productos.serviceName));
+   encontrado = productos.find(productos => productos.serviceName == agregarProducto); //callback
 
-  while (ingreso != "basta") {
-    ingreso = prompt("ingrese algo que quiera comprar");
 
-    hiceBreak = false;
+if (encontrado) {
+  carrito.push(agregarProducto)
 
-    for (let i = 0; i < (productos.serviceName).length; i++) {
-      if (ingreso == productos.serviceName[i]) {
-        carrito.push(productos.serviceName[i]);
-        hiceBreak = true;
-        break;
-      }
-    }
-  }
+} else {
+ alert('producto inválido') //undefined
+}
 
-  if (hiceBreak == false && ingreso != "basta") {
-    alert("Producto invalido");
-  }
-};
+}
+
+/* Global variables */
+
+const carrito = [];
+
+
 
 const fotos = [
   {
@@ -68,33 +93,8 @@ const fotos = [
 ];
 
 
-  document.getElementById("images-section").innerHTML = fotos.map((fotos) => `<img class='m-3 shadow-xl hover:grayscale transition duration-500 cursor-pointer' width='250px' src=${fotos.url} alt=${fotos.textAlt}/>`).join('')
-
-// Agregar productos al carro
-const productos = [
-  {
-    url: 'width="250" height="250" src="https://www.youtube.com/embed/BSTyuQV2nBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
-    serviceName: "Curso de Automaquillaje",
-    precio: 80,
-    descripcion:
-      "En este curso descubriras como lograr un maquillaje excelente para tu día a día."
-  },
-  {
-    url: 'width="250" height="250" src="https://www.youtube.com/embed/v2DJvu3gpfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
-    serviceName: "Curso de Pieles",
-    precio: 150,
-    descripcion:
-      "Aprendré a cuidar, preparar y tratar tu piel con todo el amor que se merece."
-  },
-  {
-    url: 'width="250" height="250" src="https://www.youtube.com/embed/JrR0KDukTHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
-    serviceName: "Curso Tecnicas de noche",
-    precio: 250,
-    descripcion:
-      "Consigué un resulado impactante y reflejá todo eso que queres lograr en eventos nocturnos."
-  }
-];
-
+// DOM
+// Cursos
   document.getElementById("products-section").innerHTML = productos.map(
     (productos) =>
       `
@@ -107,19 +107,11 @@ const productos = [
             </div>
         </div>`
   ).join('');
+  // Fotos
+  document.getElementById("images-section").innerHTML = fotos.map((fotos) => `<img class='m-3 shadow-xl hover:grayscale transition duration-500 cursor-pointer' width='250px' src=${fotos.url} alt=${fotos.textAlt}/>`).join('')
 
-const carrito = [];
 
-while (ingreso != "basta") {
-  ingreso = prompt("ingrese algo que quiera comprar");
+comprar()
 
-  hiceBreak = false;
-
-  for (let i = 0; i < productosEnVenta.length; i++) {
-    if (ingreso == productosEnVenta[i]) {
-      carrito.push(productosEnVenta[i]);
-      hiceBreak = true;
-      break;
-    }
-  }
-}
+  // Carrito
+  document.getElementById('footer').innerHTML = `<p>Tienes: ${carrito} listo para pagar</p>`
