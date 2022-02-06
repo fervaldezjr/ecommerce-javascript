@@ -1,162 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/77408c3814.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <nav>
-      <!-- Logo -->
-      <a href="#">Shopping</a>
-      <!-- Navigation -->
-      <ul>
-        <li>
-          <a href="../index.html">Home</a>
-        </li>
-        <li>
-          <a href="#">Products</a>
-        </li>
-        <li>
-          <a href="./sales.html">Sales</a>
-        </li>
-      </ul>
-      <!-- Icons -->
-      <ul>
-        <li>
-          <a href="#">
-            <i class="fas fa-user-circle"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-heart"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <header>
-      <h1>
-        Buy, <br />
-        Enjoy <br />
-        & Repeat.
-      </h1>
-      <img src="https://dummyimage.com/600x400/000/fff.png" alt="" />
-    </header>
-    <main>
-      <aside class="filtro">
-        <h2>Filtra por preferencias</h2>
-        <ul>
-          <li>Talle</li>
-          <li>Color</li>
-          <li>Marca</li>
-          <li>Oferta</li>
-        </ul>
-      </aside>
-      <section class="productos">
-        <h2>Algunos de nuestros productos</h2>
-        <div class="contenedor-cards">
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="card">
-            <img src="https://dummyimage.com/200x200/000/fff.png" alt="" />
-            <h3>Producto</h3>
-            <p>Precio</p>
-            <div class="botones">
-              <button>Comprar</button>
-              <button>Agregar a Favoritos</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>
-        Shopping 2022 &copy; Todos los derechos reservados. Desarrollado por
-        <a href="#">Fernando Valdez</a>
-      </p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martina Vellani makeup</title>
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="../../public/styles.css" />
+  <!-- Ion Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Animated Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="px-5">
+  <nav class="p-5 bg-white md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center ">
+      <span data-aos="fade-up" class="text-xl cursor-pointer">
+        Martina Vellani <br> Makeup Artist
+      </span>
+
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul
+      class="md:flex md:items-center z-[100] md:z-auto md:static absolute bg-pink-200 md:bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-semibold"
+      data-aos="fade-down">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="../index.html" class="text-lg hover:bg-pink-300-500 duration-500">Portfolio</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-lg hover:text-pink-200 duration-500">Tienda</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="citas.html" class="text-lg hover:text-pink-200 duration-500">Citas</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="biografia.html" class="text-lg hover:text-pink-200 duration-500">Biografia</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="contacto.html" class="text-lg hover:text-pink-200 duration-500">Contacto</a>
+      </li>
+      <li>
+        <a class="flex justify-start mx-4 my-6 md:my-0 md:bg-pink-200 transition duration-500 hover:bg-pink-300 md:p-2 md:rounded items-center"
+          href="#">
+          <ion-icon class="text-2xl mr-2" name="cart-outline"></ion-icon>
+          <div id="cart-count"></div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <!-- Products  -->
+    <div class="grid md:grid-cols-3 gap-3" id="products-section"></div>
+  </main>
+  <footer id="footer">
+    <div class="flex justify-center items-center pt-10 pb-5 text-xs text-gray-500">
+      <p>Copyright &copy; 2021 Desarrollado por <a href="https://www.linkedin.com/in/fervaldezjr/">Fernando Valdez</a>.
+        Todos
+        los derechos reservados.</p>
+    </div>
+  </footer>
+  <!-- Animated Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Init AOS -->
+  <script>
+    AOS.init();
+  </script>
+  <script src="../js/tienda.js"></script>
+  <script src="../js/scripts.js"></script>
+</body>
+
 </html>

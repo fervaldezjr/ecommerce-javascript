@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martina Vellani makeup</title>
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="../../public/styles.css" />
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="px-5">
+    <nav class="p-5 bg-white md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center ">
+            <span class="text-xl cursor-pointer">
+                Martina Vellani <br> Makeup Artist
+            </span>
+
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+
+        <ul
+            class="md:flex md:items-center z-[100] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="../index.html" class="text-lg hover:text-pink-500 duration-500">Portfolio</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="products.html" class="text-lg hover:text-pink-500 duration-500">Tienda</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="citas.html" class="text-lg hover:text-pink-500 duration-500">Citas</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="biografia.html" class="text-lg hover:text-pink-500 duration-500">Biografia</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#" class="text-lg hover:text-pink-500 duration-500">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Products  -->
+        <div class="grid md:grid-cols-3 gap-3" id="products-section"></div>
+    </main>
+    <footer id="footer">
+        <div class="flex justify-center items-center pt-10 pb-5 text-sm text-gray-500">
+            <p>Copyright &copy; 2021 Desarrollado por <a href="https://www.linkedin.com/in/fervaldezjr/">Fernando
+                    Valdez</a>.
+                Todos
+                los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
