@@ -69,4 +69,6 @@ let cursos = document.getElementById("products-section").innerHTML = productos.m
       document.getElementById('addToCart').innerHTML = `Agregar € 300`
     }
   }
-  productoAgregado()
+  productoAgregado() //
+
+  let prueba = ''
