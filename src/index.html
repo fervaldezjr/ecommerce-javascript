@@ -2,75 +2,93 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Martina Vellani makeup</title>
-  <!-- Tailwind -->
-  <link rel="stylesheet" href="../public/styles.css" />
-  <!-- Ion Icons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!-- Animated Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio - Martina Vellani</title>
+  <!-- styles -->
+  <link rel="stylesheet" href="../public/styles.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/77408c3814.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="px-5">
-  <nav class="p-5 bg-white md:flex md:items-center md:justify-between">
-    <div class="flex justify-between items-center ">
-      <span data-aos="fade-down" class="text-xl cursor-pointer">
-        Martina Vellani <br> Makeup Artist
-      </span>
+<body>
+  <div class="contenedor-general py-5 px-10">
+    <nav id="navigation ">
+      <div class="flex justify-between items-center  relative">
+        <!-- Logo -->
+        <span class="text-lg cursor-pointer font-bold text-neutral-900">
+          MartinaVellani
+        </span>
+        <!-- Contenedor Cart y Menu hamburger -->
+        <div class="contenido flex items-center justify-center">
+          <!-- Cart -->
+          <a href="#" class="cart-contenedor flex items-center mr-2 p-2">
+            <svg class="mb-1 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none"
+              stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+              Atomicons Free
+              1.00 by @atisalab
+              License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<path
+                d="M2,3H4.23a1,1,0,0,1,1,.74L8.3,15.26a1,1,0,0,0,1,.74h8a1,1,0,0,0,.95-.68l2.33-7A1,1,0,0,0,19.61,7H6.1"
+                stroke-linecap="round"></path>
+              <line x1="9.99" y1="20" x2="10.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
+              <line x1="15.99" y1="20" x2="16.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
+            </svg>
+            <p id="cart-contador" class="mx-1 font-bold"></p>
+          </a>
+          <!-- Menu Icon -->
+          <span class="text-3xl cursor-pointer mx-2 md:hidden block" id="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none"
+              stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+              Atomicons Free
+              1.00 by @atisalab
+              License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<line x1="21"
+                x2="3" y1="18" y2="18"></line>
+              <line x1="21" x2="3" y1="12" y2="12"></line>
+              <line x1="21" x2="3" y1="6" y2="6"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <ul id="nav-list"
+        class="sm:bg-neutral-900 px-5 py-10 my-5  text-zinc-200 font-bold flex-col items-center justify-center text-right transition-all duration-500 -translate-x-[100rem] absolute right-10 left-0">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="../index.html" class="text-xl hover:text-pink-200 duration-500">Portfolio</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="products.html" class="text-xl hover:text-pink-200 duration-500">Tienda</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="citas.html" class="text-xl hover:text-pink-200 duration-500">Citas</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="biografia.html" class="text-xl hover:text-pink-200 duration-500">Biografia</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="contacto.html" class="text-xl hover:text-pink-200 duration-500">Contacto</a>
+        </li>
+      </ul>
+    </nav>
 
-      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-      </span>
-    </div>
+    <main id="portfolio" class="flex flex-wrap items-center justify-center gap-3 py-10"></main>
 
-    <ul
-      class="md:flex md:items-center z-[100] md:z-auto md:static absolute bg-pink-200 md:bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
-      data-aos="fade-down">
-      <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-lg hover:text-pink-200 duration-500">Portfolio</a>
-      </li>
-      <li class="mx-4 my-6 md:my-0">
-        <a href="pages/products.html" class="text-lg hover:text-pink-200 duration-500">Tienda</a>
-      </li>
-      <li class="mx-4 my-6 md:my-0">
-        <a href="pages/citas.html" class="text-lg hover:text-pink-200 duration-500">Citas</a>
-      </li>
-      <li class="mx-4 my-6 md:my-0">
-        <a href="pages/biografia.html" class="text-lg hover:text-pink-200 duration-500">Biografia</a>
-      </li>
-      <li class="mx-4 my-6 md:my-0">
-        <a href="pages/contacto.html" class="text-lg hover:text-pink-200 duration-500">Contacto</a>
-      </li>
-      <li>
-        <a class="flex justify-start mx-4 my-6 md:my-0 md:bg-pink-200 transition duration-500 hover:bg-pink-300 md:p-2 md:rounded items-center"
-          href="#">
-          <ion-icon class="text-2xl mr-2" name="cart-outline"></ion-icon>
-          <div id="cart-count"></div>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <div class="p-10 flex flex-wrap justify-evenly" id="images-section"></div>
-  </main>
-  <footer id="footer" class="flex justify-center items-center">
-    <div class="flex justify-center items-center pt-10 pb-5 text-center text-xs text-gray-500">
-      <p>Copyright &copy; 2021 Desarrollado por <a href="https://www.linkedin.com/in/fervaldezjr/">Fernando Valdez</a>.
-        Todos
-        los derechos reservados.</p>
-    </div>
-  </footer>
-  <!-- Animated Library -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Init AOS -->
-  <script>
-    AOS.init();
-  </script>
-  <script src="js/scripts.js"></script>
+    <section id="cursos" class="p-3 max-w-5xl flex-col items-center justify-between"></section>
+
+    <footer id="footer" class="text-neutral-500 text-xs font-light flex justify-between">
+      <div class="copyright">
+        <p>2022 &copy; Martina Vellani.</p>
+        <a href="#">Desarrollado por Fernando Valdez.</a>
+      </div>
+      <div class="links-legales flex items-end">
+        <a class="mr-3" href="#">Politicas de privacidad</a>
+        <a href="#">Terminos y condiciones</a>
+      </div>
+    </footer>
+
+  </div>
+  <!-- scripts -->
+  <script src="js/menu.js"></script>
   <script src="js/portfolio.js"></script>
   <script src="js/tienda.js"></script>
 </body>
