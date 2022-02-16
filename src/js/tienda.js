@@ -1,3 +1,25 @@
+function agregarCarro(id) {
+    item = cursos.find( (cursos) => cursos.id === id);
+    // agrego producto al carrito
+    carrito.push(item);
+    // muestro el numero de productos dentro del carrito
+    carrito.length > 0 && (contador.innerHTML = `<p>${carrito.length}</p>`)
+    
+    localStorage.setItem('Carrito', JSON.stringify(carrito));
+    let carroR = JSON.parse(localStorage.getItem('Carrito'));
+    
+    document.getElementById('mostrarStorage').innerHTML = `${JSON.stringify(carroR)}`
+}
+
+function state() {
+    let state = btn.innerHTML
+
+    cursos.map( (cursos) => state == `Valor € ${cursos.precio}` ? state = 'Add' : state = `Valor € ${cursos.precio}`)
+
+    let e = btn
+    e.innerHTML = state
+}
+
 const cursos = [
     {
         id: 1,
@@ -49,7 +71,9 @@ cursosDisponibles.innerHTML = cursos.map( (cursos) => `
             <p class='mb-3 font-semibold text-sm'>Descripción: ${cursos.descripcion}</p>
         </div>
         <div>
-            <input type="submit" value=${carrito.includes(item) ? `Añadido` : `Agregar € ${cursos.precio}`} onclick='agregarCarro(${cursos.id});' id='btn' class='btn p-2 bg-neutral-900 hover:bg-neutral-700 transition duration-500 text-zinc-100 font-semibold text-sm rounded-md'> </input>
+            <button id='btn' onclick='agregarCarro(${cursos.id})' class='btn p-2 bg-neutral-900 hover:bg-neutral-700 transition duration-500 text-zinc-100 font-semibold text-sm rounded-md'> 
+                Agregar € ${cursos.precio}
+            </button>
         </div>
     </div>
 ` ).join('');
@@ -58,12 +82,6 @@ cursosDisponibles.innerHTML = cursos.map( (cursos) => `
 si hago click, agrego al carro ese producto y muestro la cantidad.
 
 */
-function agregarCarro(id) {
-    item = cursos.find( (cursos) => cursos.id === id);
 
-    carrito.push(item);
-    
-    if (carrito.length > 0) {
-        contador.innerHTML = `<p>${carrito.length}</p>`
-    }
-}
+btn.addEventListener('click', agregarCarro);
+btn.addEventListener('click', state);
