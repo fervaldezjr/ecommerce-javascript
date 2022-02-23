@@ -13,82 +13,91 @@
 </head>
 
 <body>
-  <div class="contenedor-general py-5 px-10">
-    <nav id="navigation ">
-      <div class="flex justify-between items-center  relative">
-        <!-- Logo -->
-        <span class="text-lg cursor-pointer font-bold text-neutral-900">
-          MartinaVellani
-        </span>
-        <!-- Contenedor Cart y Menu hamburger -->
-        <div class="contenido flex items-center justify-center">
-          <!-- Cart -->
-          <a href="#" class="cart-contenedor flex items-center mr-2 p-2">
-            <svg class="mb-1 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none"
-              stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
-              Atomicons Free
-              1.00 by @atisalab
-              License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<path
-                d="M2,3H4.23a1,1,0,0,1,1,.74L8.3,15.26a1,1,0,0,0,1,.74h8a1,1,0,0,0,.95-.68l2.33-7A1,1,0,0,0,19.61,7H6.1"
-                stroke-linecap="round"></path>
-              <line x1="9.99" y1="20" x2="10.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
-              <line x1="15.99" y1="20" x2="16.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
-            </svg>
-            <p id="cart-contador" class="mx-1 font-bold"></p>
-          </a>
-          <!-- Menu Icon -->
-          <span class="text-3xl cursor-pointer mx-2 md:hidden block" id="menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none"
-              stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
-              Atomicons Free
-              1.00 by @atisalab
-              License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<line x1="21"
-                x2="3" y1="18" y2="18"></line>
-              <line x1="21" x2="3" y1="12" y2="12"></line>
-              <line x1="21" x2="3" y1="6" y2="6"></line>
-            </svg>
-          </span>
-        </div>
-      </div>
-      <!-- Navigation -->
+
+  <nav class="flex items-center justify-between p-4 pb-0">
+    <div class="menu flex items-center">
       <ul id="nav-list"
-        class="sm:bg-neutral-900 px-5 py-10 my-5  text-zinc-200 font-bold flex-col items-center justify-center text-right transition-all duration-500 -translate-x-[100rem] absolute right-10 left-0">
-        <li class="mx-4 my-6 md:my-0">
-          <a href="../index.html" class="text-xl hover:text-pink-200 duration-500">Portfolio</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="products.html" class="text-xl hover:text-pink-200 duration-500">Tienda</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="citas.html" class="text-xl hover:text-pink-200 duration-500">Citas</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="biografia.html" class="text-xl hover:text-pink-200 duration-500">Biografia</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="contacto.html" class="text-xl hover:text-pink-200 duration-500">Contacto</a>
-        </li>
+        class="absolute left-0 right-0 top-0 bottom-0 z-10 flex flex-col text-2xl p-5 items-start font-normal text-black bg-white transition duration-500 -translate-x-[100rem] md:-translate-x-[0] md:flex md:flex-row md:items-center md:justify-evenly md:top-10 md:z-0 md:static md:p-0">
+
+        <div class="logo font-bold flex justify-between items-center w-full md:flex md:justify-start">
+          <!-- Close -->
+          <svg id="close" class="left-5 top-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            width="24" height="24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round">&lt;!--! Atomicons
+            Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright
+            2021
+            Atomicons --&gt;<circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="15" y1="15" x2="9" y2="9"></line>
+          </svg>
+          <!-- Logo -->
+          <div>
+            <a class="text-3xl" href="#">Martina</a>
+          </div>
+        </div>
+
+        <div
+          class="navigation font-normal flex flex-col items-start justify-around mt-5 h-3/4 md:flex md:flex-row md:justify-center md:items-center md:mt-0 md:ml-9">
+          <li><a class="text-2xl border-b-4 border-orange-600 md:mr-3 md:border-0" href="#">Portfolio</a></li>
+          <li><a class="text-2xl border-b-4 border-orange-600 md:mr-3 md:border-0" href="./shop.html">Shopping</a>
+          </li>
+          <li><a class="text-2xl border-b-4 border-orange-600 md:mr-3 md:border-0" href="#">Biography</a></li>
+          <li><a class="text-2xl border-b-4 border-orange-600 md:mr-3 md:border-0" href="#">Contact</a></li>
+        </div>
+
+
       </ul>
-    </nav>
-
-    <main id="portfolio" class="flex flex-wrap items-center justify-center gap-3 py-10"></main>
-
-    <section id="cursos" class="p-3 max-w-5xl flex-col items-center justify-between"></section>
-
-    <div id="mostrarStorage"></div>
-
-    <footer id="footer" class="text-neutral-500 text-xs font-light flex justify-between">
-      <div class="copyright">
-        <p>2022 &copy; Martina Vellani.</p>
-        <a href="#">Desarrollado por Fernando Valdez.</a>
+      <!-- Icon Menu -->
+      <svg id="menu" class="md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+        fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--!
+        Atomicons Free
+        1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons
+        --&gt;<line x1="21" x2="3" y1="18" y2="18"></line>
+        <line x1="21" x2="3" y1="12" y2="12"></line>
+        <line x1="21" x2="3" y1="6" y2="6"></line>
+      </svg>
+    </div>
+    <div class="content flex justify-between items-center">
+      <div class="buscar mr-3 flex">
+        <!-- Favourites -->
+        <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+          stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--! Atomicons Free
+          1.00 by @atisalab License -
+          https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<path
+            d="M20.66,12.34l-7.95,8a1,1,0,0,1-1.42,0L3.34,12.34a4.59,4.59,0,0,1,0-6.49l.09-.08a4.59,4.59,0,0,1,5.73-.62l3.05,2,2.59-1.8a4.61,4.61,0,0,1,5.86.53h0A4.59,4.59,0,0,1,20.66,12.34Z">
+          </path></svg>
+        <p class="font-bold">2</p>
       </div>
-      <div class="links-legales flex items-end">
-        <a class="mr-3" href="#">Politicas de privacidad</a>
-        <a href="#">Terminos y condiciones</a>
+      <div class="carro flex">
+        <a href="./cart.html">
+          <!-- Cart -->
+          <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+            stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">&lt;!--! Atomicons Free
+            1.00 by @atisalab License -
+            https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<path
+              d="M2,3H4.23a1,1,0,0,1,1,.74L8.1,14.52A2,2,0,0,0,10,16h6.53a2,2,0,0,0,1.9-1.37l2.1-6.31A1,1,0,0,0,19.61,7H6.1"
+              stroke-linecap="round"></path>
+            <line x1="9.99" y1="20" x2="10.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
+            <line x1="15.99" y1="20" x2="16.01" y2="20" stroke-linecap="round" stroke-width="4"></line>
+          </svg>
+        </a>
+        <p class="font-bold">1</p>
       </div>
-    </footer>
+    </div>
+  </nav>
 
-  </div>
+  <main id="portfolio" class="flex flex-wrap items-center justify-center gap-3 py-10"></main>
+
+  <footer id="footer" class="text-neutral-500 text-xs font-light flex justify-between">
+    <div class="copyright">
+      <p>2022 &copy; Martina Vellani.</p>
+      <a href="#">Desarrollado por Fernando Valdez.</a>
+    </div>
+    <div class="links-legales flex items-end">
+      <a class="mr-3" href="#">Politicas de privacidad</a>
+      <a href="#">Terminos y condiciones</a>
+    </div>
+  </footer>
   <!-- scripts -->
   <script src="js/menu.js"></script>
   <script src="js/portfolio.js"></script>
